@@ -1,0 +1,3 @@
+# One markdown file per line, repo-root relative paths, build order.
+kit/markdown/00-cover.md
+kit/markdown/01-concept.md

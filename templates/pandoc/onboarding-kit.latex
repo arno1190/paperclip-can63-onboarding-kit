@@ -1,0 +1,85 @@
+% Pandoc LaTeX template — onboarding kit (CAN-55)
+% Brand spacing/colors: align with CAN-45 UX deliverables before tightening.
+
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$]{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% Chart / accent colors — replace with CAN-45 tokens when signed off.
+% \definecolor{BrandPrimary}{HTML}{333333}
+% \definecolor{BrandAccent}{HTML}{0066CC}
+
+\geometry{margin=2.2cm}
+
+\newcommand{\KitLogo}{%
+  \IfFileExists{assets/branding/logo.pdf}{%
+    \includegraphics[height=10mm]{assets/branding/logo.pdf}%
+  }{%
+    \IfFileExists{assets/branding/logo.png}{%
+      \includegraphics[height=10mm]{assets/branding/logo.png}%
+    }{}%
+  }%
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \KitLogo}
+\fancyhead[R]{\small \leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+$if(fontfamily)$
+\usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
+$endif$
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+$if(title)$
+\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+$endif$
+$if(subtitle)$
+\usepackage{titling}
+\pretitle{\begin{center}\LARGE\bfseries}
+\posttitle{\par\end{center}\vskip 0.5em}
+$endif$
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+$if(date)$
+\date{$date$}
+$else$
+\date{\today}
+$endif$
+
+\begin{document}
+$if(title)$
+\maketitle
+$if(subtitle)$
+\begin{center}{\large $subtitle$}\end{center}
+$endif$
+$endif$
+
+$for(include-before)$
+$include-before$
+
+$endfor$
+$if(toc)$
+\tableofcontents
+$endif$
+$body$
+
+$for(include-after)$
+$include-after$
+
+$endfor$
+\end{document}

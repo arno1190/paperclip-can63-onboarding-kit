@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ressources pour les écoles — Kit &amp; pilote portail</title>
+    <meta
+      name="description"
+      content="Supports du kit pédagogique et information sur le pilote portail sur invitation. Les PDF restent la référence hors ligne."
+    />
+    <style>
+      :root {
+        --bg: #f7f5f2;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #4a4a4a;
+        --accent: #0d5c63;
+        --accent-soft: #e6f2f3;
+        --border: #dcd6cf;
+        --focus: #1f6feb;
+        --maxw: 42rem;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--bg);
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.15em;
+      }
+
+      a:hover {
+        text-decoration-thickness: 0.12em;
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--focus);
+        outline-offset: 2px;
+      }
+
+      .skip {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+
+      .skip:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0.5rem 1rem;
+        background: var(--surface);
+      }
+
+      header {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 1.25rem 1.25rem 2.5rem;
+      }
+
+      header .wrap {
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+      }
+
+      h1 {
+        font-size: clamp(1.65rem, 4vw, 2.1rem);
+        line-height: 1.2;
+        margin: 0 0 0.5rem;
+      }
+
+      .lede {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      main section {
+        margin-top: 2.25rem;
+        padding: 1.25rem 1.35rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      }
+
+      main h2 {
+        font-size: 1.2rem;
+        margin: 0 0 0.75rem;
+        color: var(--accent);
+      }
+
+      main p,
+      main ul {
+        margin: 0 0 0.75rem;
+      }
+
+      main ul {
+        padding-left: 1.25rem;
+      }
+
+      main li {
+        margin-bottom: 0.35rem;
+      }
+
+      .callout {
+        background: var(--accent-soft);
+        border-left: 4px solid var(--accent);
+        padding: 0.85rem 1rem;
+        margin: 0.75rem 0 0;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      .faq details {
+        border: 1px solid var(--border);
+        border-radius: 0.35rem;
+        padding: 0.65rem 0.85rem;
+        margin-bottom: 0.5rem;
+        background: #fafafa;
+      }
+
+      .faq summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .faq details[open] summary {
+        margin-bottom: 0.5rem;
+      }
+
+      footer {
+        margin-top: 2.5rem;
+        padding: 1.5rem 0 3rem;
+        border-top: 1px solid var(--border);
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      @media (min-width: 48rem) {
+        .wrap {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <header>
+      <div class="wrap">
+        <h1 id="top">Ressources pour les écoles</h1>
+        <p class="lede">
+          Accès aux supports du kit : la <strong>même source</strong> que les PDF officiels ; lecture confortable sur mobile et bureau. Aucun compte n’est requis pour consulter cette page.
+        </p>
+      </div>
+    </header>
+    <main id="contenu" class="wrap" tabindex="-1">
+      <section id="deux-pistes" aria-labelledby="deux-pistes-title">
+        <h2 id="deux-pistes-title">Deux façons d’accéder aux contenus</h2>
+        <p>
+          Les établissements partenaires disposent d’une <strong>piste PDF / kit</strong> : documents imprimables et hors ligne, versionnés, qui restent le
+          <strong>référentiel minimal</strong> pour faire tourner l’atelier sans dépendre d’Internet.
+        </p>
+        <p>
+          En parallèle, une <strong>piste portail (pilote)</strong> peut être proposée <strong>de façon progressive et sur invitation</strong> : navigation, téléchargements canoniques et journal des changements — <strong>complément</strong>, pas substitut aux PDF ni aux flux déjà en place (courriel, ENT, etc.).
+        </p>
+        <ul>
+          <li><strong>Kit + PDF</strong> : référence hors ligne et traçabilité contractuelle des artefacts versionnés.</li>
+          <li><strong>Portail</strong> : option pour le confort en ligne ; périmètre et calendrier soumis aux arbitrages board (<a href="../docs/portal-pilot-gtm-messaging.md">messagerie GTM</a>).</li>
+        </ul>
+      </section>
+
+      <section id="version" aria-labelledby="version-title">
+        <h2 id="version-title">Version actuelle</h2>
+        <p>
+          La <strong>version du kit</strong> est portée par les PDF générés depuis ce dépôt (<code>make pdf</code>, sortie dans <code>dist/</code>). Le site, lorsqu’il sera publié, affichera la version courante et les mêmes fichiers ; toute divergence sera traitée comme bug de publication.
+        </p>
+        <p>
+          Un journal des changements pourra être relié ici une fois la chaîne de publication validée — <strong>sans date de roadmap non validée par le board</strong>.
+        </p>
+      </section>
+
+      <section id="pilote" aria-labelledby="pilote-title">
+        <h2 id="pilote-title">Pilote (sur invitation)</h2>
+        <p>
+          Un espace réservé aux établissements <strong>invités</strong> pourra être proposé ; il n’y a <strong>pas d’ouverture grand public</strong> ni de périmètre figé tant que le board n’a pas arbitré (<a href="../docs/school-portal-architecture-memo.md">mémo architecture</a>).
+        </p>
+        <div class="callout" role="note">
+          Formulations volontairement <em>phased</em> et <em>sous réserve des arbitrages en cours</em>, conformément au garde-fou d’exécution portail (ticket CAN-58, gate board) — cette page statique ne active aucune fonctionnalité portail.
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Signaler un problème</h2>
+        <p>
+          Canal simple pour les remontées (email ou ticket côté ops), aligné sur le mémo. L’adresse et le processus exacts sont <strong>à confirmer par le board / les opérations</strong> avant mise en production.
+        </p>
+        <p>
+          <!-- Remplacer href par le contact validé -->
+          <a href="mailto:support@example.com">Écrire au support (placeholder)</a>
+        </p>
+      </section>
+
+      <section id="confiance" aria-labelledby="confiance-title">
+        <h2 id="confiance-title">Confiance &amp; conformité</h2>
+        <p>
+          Cible : hébergement <strong>Union européenne</strong>, sous-traitants documentés, politique de confidentialité et mentions légales publiques. Les textes définitifs (responsable de traitement, DPA, conservation des journaux et des messages) sont
+          <strong>à valider avec le board / le juridique</strong> avant publication.
+        </p>
+        <p>Rôles ciblés en première phase : direction, équipes pédagogiques, référents techniques — pas d’engagement sur comptes élèves sans décision produit et juridique dédiée.</p>
+      </section>
+
+      <section id="faq" class="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Foire aux questions</h2>
+        <details>
+          <summary>Le portail remplace-t-il les PDF et le kit physique ?</summary>
+          <p>
+            Non. Les PDF et le matériel livré restent le <strong>socle</strong> pour travailler hors ligne et pour la traçabilité. Le portail, lorsqu’il est proposé,
+            <strong>reflète et facilite l’accès</strong> aux mêmes ressources et aux mises à jour.
+          </p>
+        </details>
+        <details>
+          <summary>Quelle est la « source de vérité » entre le site et les documents imprimés ?</summary>
+          <p>
+            Les <strong>artefacts versionnés</strong> (PDF issus de la chaîne de build) sont la référence contractuelle pour l’exploitation du kit. Le site affiche la version courante et les mêmes fichiers.
+          </p>
+        </details>
+        <details>
+          <summary>Où sont hébergées les données et qui est responsable du traitement ?</summary>
+          <p>
+            Cible <strong>hébergement UE</strong>, sous-traitants documentés, politique de confidentialité publique. Les détails précis sont <strong>à valider avec le board / le juridique</strong> avant publication.
+          </p>
+        </details>
+        <details>
+          <summary>Les élèves devront-ils créer un compte ?</summary>
+          <p>
+            Les premières phases peuvent <strong>limiter l’accès authentifié</strong> aux rôles adultes (direction, équipes pédagogiques, référents tech). Un périmètre élève éventuel est une <strong>évolution</strong> soumise à décision produit et juridique.
+          </p>
+        </details>
+        <details>
+          <summary>Comment participer au pilote et que garantit-on sur les fonctionnalités ?</summary>
+          <p>
+            Participation <strong>sur invitation</strong>, avec périmètre et disponibilité alignés sur les arbitrages board. Le pilote sert à tester l’expérience et la qualité de service ; la feuille de route publique reste
+            <strong>indicative</strong> tant que les jalons ne sont pas validés officiellement.
+          </p>
+        </details>
+      </section>
+
+      <footer>
+        <p>
+          Contenu dérivé de <a href="../docs/portal-pilot-gtm-messaging.md">docs/portal-pilot-gtm-messaging.md</a> (livrable CAN-60). Page statique — pas d’auth, pas de fonctionnalités portail.
+        </p>
+        <p><a href="#top">Haut de page</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
